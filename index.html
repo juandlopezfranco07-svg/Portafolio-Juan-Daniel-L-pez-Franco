@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juan Daniel López Franco · Analista de Negocio Junior</title>
+  <meta name="description" content="Portafolio de Juan Daniel López Franco: análisis de negocio, indicadores, automatización de reportes y optimización de procesos.">
+  <meta property="og:title" content="Juan Daniel López Franco · Analista de Negocio Junior">
+  <meta property="og:description" content="Experiencia en análisis de indicadores, automatización de reportes y mejora de procesos para apoyar decisiones de negocio.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b2545">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fff; --soft: #f3f6fa; --ink: #0f1b2d; --muted: #536276;
+      --line: #dfe6ee; --navy: #0b2545; --teal: #087e78; --teal-bright: #13a89e;
+      --heading: "Manrope", system-ui, sans-serif;
+      --body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --wrap: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 var(--body); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid #12a99e; outline-offset: 4px; border-radius: 4px; }
+    .wrap { width: min(100%, var(--wrap)); margin: 0 auto; padding-inline: clamp(18px,4vw,40px); }
+    .skip { position: absolute; z-index: 40; top: -5rem; left: 1rem; padding: .7rem 1rem; border-radius: 8px; background: var(--navy); color: #fff; }
+    .skip:focus { top: 1rem; }
+    .top { position: sticky; top: 0; z-index: 20; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); backdrop-filter: blur(10px); }
+    .top-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { flex: none; display: flex; align-items: center; gap: 10px; color: var(--navy); font: 800 14px/1.25 var(--heading); text-decoration: none; }
+    .brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px; background: var(--navy); color: #fff; font-size: 11px; }
+    .brand small { display: block; margin-top: 3px; color: var(--muted); font: 600 11px/1.2 var(--body); }
+    .nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(10px,2vw,25px); font: 700 13px var(--heading); }
+    .nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+    .nav a:hover { color: var(--teal); }
+    .cta { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 8px; padding: 10px 17px; border: 1px solid var(--teal); border-radius: 10px; background: var(--teal); color: #fff; font: 700 14px var(--heading); text-decoration: none; transition: background .2s, transform .2s, border-color .2s; }
+    .cta:hover { transform: translateY(-1px); border-color: #066b66; background: #066b66; color: #fff; }
+    .cta.ghost { border-color: var(--line); background: #fff; color: var(--navy); }
+    .cta.ghost:hover { border-color: var(--navy); background: var(--soft); }
+    .hero { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(300px,.9fr); align-items: center; gap: clamp(28px,5vw,68px); padding: clamp(48px,7vw,90px) 0 38px; }
+    .pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 99px; background: rgba(19,168,158,.11); color: var(--teal); font: 800 12px var(--heading); }
+    .pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--teal-bright); }
+    h1,h2,h3,h4,p { margin-top: 0; }
+    h1 { margin: 18px 0 8px; color: var(--navy); font: 800 clamp(2.65rem,5.8vw,4.9rem)/1.02 var(--heading); letter-spacing: -.05em; }
+    .role { margin: 0; color: var(--muted); font: 700 clamp(1.05rem,2vw,1.3rem)/1.4 var(--heading); }
+    .intro { max-width: 670px; margin: 18px 0 0; color: #2c3a4d; font-size: clamp(1.05rem,2vw,1.2rem); }
+    .intro strong { color: var(--navy); font-weight: 700; box-shadow: inset 0 -.38em 0 rgba(19,168,158,.18); }
+    .acts { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 24px; }
+    .summary-card { position: relative; overflow: hidden; padding: clamp(24px,4vw,32px); border-radius: 22px; background: var(--navy); color: #fff; box-shadow: 0 30px 60px -30px rgba(11,37,69,.55); }
+    .summary-card::after { content: ""; position: absolute; top: -80px; right: -80px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle,rgba(19,168,158,.42),transparent 70%); pointer-events: none; }
+    .summary-title { position: relative; z-index: 1; margin-bottom: 5px; color: #b6d2ed; font: 800 11px var(--heading); letter-spacing: .13em; text-transform: uppercase; }
+    .metric { position: relative; z-index: 1; display: flex; align-items: baseline; gap: 14px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .metric:nth-last-child(2) { border-bottom: 0; }
+    .metric strong { flex: none; min-width: 108px; color: #5ee0d6; font: 800 38px/1 var(--heading); letter-spacing: -.04em; }
+    .metric span { color: #d5e2ef; font-size: 14px; line-height: 1.35; }
+    .summary-foot { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 14px; margin-top: 12px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.14); color: #d5e2ef; font-size: 13px; }
+    section { padding: 70px 0 12px; scroll-margin-top: 78px; }
+    .section-head { max-width: 740px; margin-bottom: 28px; }
+    .eyebrow { margin: 0; color: var(--teal); font: 800 12px var(--heading); letter-spacing: .13em; text-transform: uppercase; }
+    h2 { margin: 8px 0 0; color: var(--navy); font: 800 clamp(2rem,4vw,3.1rem)/1.1 var(--heading); letter-spacing: -.04em; }
+    .section-head > p:last-child { margin: 10px 0 0; color: var(--muted); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+    .skill { display: flex; flex-direction: column; gap: 10px; min-height: 250px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: #fff; scroll-margin-top: 90px; transition: box-shadow .25s,transform .25s,border-color .25s; }
+    .skill:hover,.skill:target { transform: translateY(-3px); border-color: rgba(19,168,158,.5); box-shadow: 0 18px 38px -25px rgba(11,37,69,.42); }
+    .skill-icon { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px; background: rgba(19,168,158,.12); color: var(--teal); font: 800 14px var(--heading); }
+    .skill h3 { margin: 0; color: var(--navy); font: 800 19px/1.2 var(--heading); }
+    .skill-type { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .skill > p { margin: 0; color: #324256; font-size: 15px; }
+    .evidence { margin-top: auto; padding: 11px 13px; border-radius: 11px; background: var(--soft); color: #324256; font-size: 14px; }
+    .evidence b { display: block; margin-bottom: 2px; color: var(--teal); font: 800 10px var(--heading); letter-spacing: .1em; text-transform: uppercase; }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tags span { padding: 3px 8px; border: 1px solid var(--line); border-radius: 7px; background: #fff; color: var(--navy); font-size: 11px; font-weight: 700; }
+    .more { color: var(--teal); font: 800 12px var(--heading); text-decoration: none; }
+    .more:hover { text-decoration: underline; }
+    .tool-panels { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+    .tool-panel { padding: 18px 20px; border-radius: 16px; background: var(--soft); }
+    .tool-panel h3 { margin: 0 0 10px; color: var(--navy); font: 800 15px var(--heading); }
+    .tool-panel p { margin: 0; color: #324256; font-size: 14px; }
+    .cases { display: grid; gap: 18px; }
+    .case { display: grid; grid-template-columns: minmax(220px,270px) minmax(0,1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: #fff; scroll-margin-top: 90px; }
+    .case-metric { display: flex; flex-direction: column; justify-content: space-between; gap: 16px; padding: 25px; background: var(--soft); }
+    .case-metric small { color: var(--muted); font: 800 11px var(--heading); letter-spacing: .1em; text-transform: uppercase; }
+    .case-metric strong { display: block; color: var(--teal); font: 800 clamp(2.6rem,5vw,3.7rem)/1 var(--heading); letter-spacing: -.05em; overflow-wrap: anywhere; }
+    .case-metric span { color: var(--muted); font-size: 14px; line-height: 1.4; }
+    .case-content { padding: clamp(20px,3vw,30px); }
+    .case-content h3 { margin: 0; color: var(--navy); font: 800 clamp(1.25rem,2.6vw,1.65rem)/1.25 var(--heading); letter-spacing: -.025em; }
+    .case-meta { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+    .rar { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 18px; }
+    .rar-item { min-width: 0; padding-top: 11px; border-top: 3px solid var(--line); }
+    .rar-item:nth-child(2) { border-color: var(--navy); }
+    .rar-item:nth-child(3) { border-color: var(--teal-bright); }
+    .rar-item h4 { margin: 0 0 5px; color: var(--navy); font: 800 11px var(--heading); letter-spacing: .08em; text-transform: uppercase; }
+    .rar-item p { margin: 0; color: #324256; font-size: 14px; line-height: 1.5; }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .case-tags span { padding: 5px 9px; border-radius: 7px; background: var(--soft); color: var(--navy); font: 700 11px var(--heading); }
+    .timeline { position: relative; max-width: 900px; padding-left: 28px; }
+    .timeline::before { position: absolute; top: 7px; bottom: 8px; left: 6px; width: 2px; background: var(--line); content: ""; }
+    .timeline-fill { position: absolute; top: 7px; left: 6px; width: 2px; height: 0; background: var(--teal-bright); transition: height 1s ease; }
+    .timeline.animated .timeline-fill { height: calc(100% - 15px); }
+    .timeline-item { position: relative; padding: 0 0 24px; }
+    .timeline-item::before { position: absolute; top: 4px; left: -28px; width: 14px; height: 14px; border: 3px solid var(--teal-bright); border-radius: 50%; background: #fff; content: ""; }
+    .timeline-date { color: var(--teal); font: 800 12px var(--heading); }
+    .timeline-item h3 { margin: 4px 0; color: var(--navy); font: 800 18px/1.3 var(--heading); }
+    .timeline-item p { margin: 0; color: var(--muted); font-size: 15px; }
+    .education-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .education-card { padding: 16px; border: 1px solid var(--line); border-radius: 14px; }
+    .education-card h3 { margin: 0 0 4px; color: var(--navy); font: 800 14px/1.35 var(--heading); }
+    .education-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .extra-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .extra-card { padding: 16px; border-radius: 14px; background: var(--soft); }
+    .extra-card h3 { margin: 0 0 7px; color: var(--navy); font: 800 14px var(--heading); }
+    .extra-card p { margin: 0; color: #324256; font-size: 14px; }
+    .contact { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(280px,1fr); align-items: center; gap: 28px; margin: 70px 0 30px; padding: clamp(24px,5vw,58px); border-radius: 24px; background: var(--navy); color: #fff; scroll-margin-top: 82px; }
+    .contact h2 { color: #fff; font: 800 clamp(2rem,4.5vw,3.4rem)/1.05 var(--heading); letter-spacing: -.04em; }
+    .contact .eyebrow { color: #5ee0d6; }
+    .contact-copy { margin: 12px 0 0; color: #d5e2ef; }
+    .contact-links { display: grid; gap: 9px; }
+    .contact-links a { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 48px; padding: 12px 14px; border: 1px solid rgba(255,255,255,.18); border-radius: 10px; color: #fff; font: 700 13px var(--heading); text-decoration: none; overflow-wrap: anywhere; transition: background .2s,border-color .2s; }
+    .contact-links a:first-child { border-color: var(--teal-bright); background: var(--teal); }
+    .contact-links a:hover { border-color: #5ee0d6; background: rgba(255,255,255,.12); }
+    .contact-links a:first-child:hover { background: #087e78; }
+    .contact-arrow { flex: none; font-size: 17px; }
+    footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; padding: 8px 0 30px; color: var(--muted); font-size: 13px; }
+    footer p { margin: 0; }
+    .rv { opacity: 1; transform: none; }
+    .js-ready .rv { opacity: 0; transform: translateY(12px); transition: opacity .5s ease,transform .6s ease; }
+    .js-ready .rv.in { opacity: 1; transform: none; }
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .summary-card { max-width: 720px; }
+      .skills-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .case { grid-template-columns: minmax(0,1fr); }
+      .case-metric { min-height: 135px; }
+      .contact { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      html { scroll-padding-top: 112px; }
+      .top-inner { min-height: 0; align-items: flex-start; flex-direction: column; gap: 5px; padding-block: 8px; }
+      .brand { font-size: 13px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .nav { width: 100%; justify-content: flex-start; gap: 18px; overflow-x: auto; padding: 4px 0 5px; scrollbar-width: thin; }
+      .nav a { font-size: 12px; }
+      .top-contact { display: none; }
+      .hero { padding-top: 40px; }
+      .skills-grid, .tool-panels, .education-grid, .extra-grid { grid-template-columns: 1fr; }
+      .skill { min-height: 0; }
+      .case-metric { min-height: 120px; }
+      .rar { grid-template-columns: 1fr; gap: 11px; }
+      .contact { margin-top: 48px; }
+      footer { flex-direction: column; }
+    }
+    @media (max-width: 380px) {
+      body { font-size: 16px; }
+      .wrap { padding-inline: 14px; }
+      .hero { padding-top: 32px; }
+      h1 { font-size: clamp(2.25rem,12vw,2.7rem); }
+      .metric { gap: 8px; }
+      .metric strong { min-width: 88px; font-size: 32px; }
+      .summary-card { padding: 20px; }
+      .case-content { padding: 18px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .js-ready .rv { opacity: 1; transform: none; }
+      .timeline.animated .timeline-fill { height: calc(100% - 15px); }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#inicio" aria-label="Juan Daniel López Franco, inicio">
+        <span class="brand-mark" aria-hidden="true">JDLF</span>
+        <span>Juan Daniel López Franco<small>Analista de Negocio Junior</small></span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#habilidades">Habilidades</a><a href="#casos">Proyectos</a><a href="#trayectoria">Trayectoria</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="cta top-contact" href="#contacto">Contactar <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+  <main class="wrap" id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="nombre">
+      <div>
+        <span class="pill rv">Interés en oportunidades multinacionales</span>
+        <h1 class="rv" id="nombre">Juan Daniel<br>López Franco</h1>
+        <p class="role rv">Analista de Negocio Junior</p>
+        <p class="intro rv">Transformo datos en <strong>decisiones estratégicas</strong> y optimizo procesos para convertir información compleja en oportunidades de eficiencia, crecimiento y rentabilidad.</p>
+        <div class="acts rv"><a class="cta" href="#casos">Ver proyectos</a><a class="cta ghost" href="#contacto">Contactar</a></div>
+      </div>
+      <aside class="summary-card rv" aria-label="Resumen de cuatro resultados profesionales">
+        <p class="summary-title">Resultados destacados</p>
+        <div class="metric"><strong>-65%</strong><span>menos tiempo de actualización de reportes en Avianca</span></div>
+        <div class="metric"><strong>-50%</strong><span>menos tiempo de exposición en el comité de seguimiento</span></div>
+        <div class="metric"><strong>-60%</strong><span>menos reprocesos y tiempos logísticos en el layout operativo</span></div>
+        <div class="metric"><strong>+70%</strong><span>más eficiencia en el proceso de logística inversa</span></div>
+        <div class="summary-foot"><span>Bogotá, Colombia</span><span>Analista de Negocio Junior</span></div>
+      </aside>
+    </section>
+    <section id="habilidades" aria-labelledby="skills-title">
+      <div class="section-head rv"><p class="eyebrow">Lo que aporto</p><h2 id="skills-title">Habilidades respaldadas por evidencia</h2><p>Capacidades aplicadas en proyectos de análisis, consultoría y mejora de procesos.</p></div>
+      <div class="skills-grid">
+        <article class="skill rv" id="skill-analitico">
+          <span class="skill-icon" aria-hidden="true">01</span><div><h3>Pensamiento analítico</h3><span class="skill-type">Análisis de negocio</span></div>
+          <p>Analizo indicadores, tendencias y procesos para entender el desempeño y encontrar oportunidades de mejora.</p>
+          <div class="evidence"><b>Evidencia</b>En Avianca analicé indicadores de mercados y rutas en nueve países. Para Dintexco, realicé un diagnóstico y propuesta de mejora a cinco áreas: comercial, mercadeo, administración, finanzas y producción/logística.</div>
+          <div class="skill-tags"><span>Excel</span><span>Power BI</span><span>Indicadores</span></div>
+          <div class="skill-tags"><a class="more" href="#caso-avianca">Ver caso de Avianca →</a><a class="more" href="#caso-dintexco">Ver caso de Dintexco →</a></div>
+        </article>
+        <article class="skill rv" id="skill-estrategico">
+          <span class="skill-icon" aria-hidden="true">02</span><div><h3>Enfoque estratégico</h3><span class="skill-type">Planificación y oportunidades</span></div>
+          <p>Convierto hallazgos en alternativas para fortalecer servicio, operación y crecimiento.</p>
+          <div class="evidence"><b>Evidencia</b>En Dintexco construí un Customer Journey Map y formulé propuestas con DOFA cruzado y KPI; en el semillero analicé flujos y layout operativo con metodología Lean.</div>
+          <div class="skill-tags"><span>Customer Journey Map</span><span>DOFA cruzado</span><span>Lean</span></div>
+          <div class="skill-tags"><a class="more" href="#caso-dintexco">Ver caso de Dintexco →</a><a class="more" href="#caso-semillero">Ver caso del semillero →</a></div>
+        </article>
+        <article class="skill rv" id="skill-resultados">
+          <span class="skill-icon" aria-hidden="true">03</span><div><h3>Orientación a resultados</h3><span class="skill-type">Seguimiento de desempeño</span></div>
+          <p>Conecto objetivos con indicadores y doy seguimiento a resultados operativos y comerciales.</p>
+          <div class="evidence"><b>Evidencia</b>Contribuí a reducir 65 % el tiempo de actualización de reportes en Avianca y a aumentar 70 % la eficiencia de logística inversa en el semillero.</div>
+          <div class="skill-tags"><span>Mejora continua</span><span>Seguimiento</span></div><div class="skill-tags"><a class="more" href="#caso-avianca">Ver caso de Avianca →</a><a class="more" href="#caso-semillero">Ver caso del semillero →</a></div>
+        </article>
+        <article class="skill rv" id="skill-detalle">
+          <span class="skill-icon" aria-hidden="true">04</span><div><h3>Atención al detalle</h3><span class="skill-type">Calidad de análisis</span></div>
+          <p>Reviso datos y procesos para reconocer variaciones, cuellos de botella y puntos de contacto críticos.</p>
+          <div class="evidence"><b>Evidencia</b>Identifiqué cuellos de botella en flujos logísticos y analicé momentos de verdad en la experiencia del cliente.</div>
+          <div class="skill-tags"><span>Análisis de procesos</span><span>Experiencia del cliente</span></div><a class="more" href="#caso-semillero">Ver caso de logística →</a>
+        </article>
+        <article class="skill rv" id="skill-aprendizaje">
+          <span class="skill-icon" aria-hidden="true">05</span><div><h3>Aprendizaje continuo</h3><span class="skill-type">Formación profesional</span></div>
+          <p>Amplío mis conocimientos en analítica, mejora de procesos y estrategia de negocio.</p>
+          <div class="evidence"><b>Formación adicional</b>McKinsey Forward Program, Lean Six Sigma, Analíticas y Métricas de Marketing y “Quiero Ser Digital” – Formación en Inteligencia Artificial.</div>
+          <div class="skill-tags"><span>Lean Six Sigma</span><span>Analítica</span></div><a class="more" href="#trayectoria">Ver formación →</a>
+        </article>
+        <article class="skill rv" id="skill-liderazgo">
+          <span class="skill-icon" aria-hidden="true">06</span><div><h3>Liderazgo</h3><span class="skill-type">Acompañamiento y capacitación</span></div>
+          <p>Comparto conocimientos y acompaño a otras personas para fortalecer sus capacidades.</p>
+          <div class="evidence"><b>Evidencia</b>Creé un curso práctico y capacité y acompañé a 12 personas en análisis de datos.</div>
+          <div class="skill-tags"><span>Excel</span><span>Power BI</span><span>Formación</span></div><a class="more" href="#caso-curso">Ver Proyecto Independiente →</a>
+        </article>
+      </div>
+      <div class="tool-panels">
+        <article class="tool-panel rv"><h3>Herramientas digitales</h3><p>Excel · avanzado &nbsp;|&nbsp; Power BI · intermedio &nbsp;|&nbsp; SQL · básico &nbsp;|&nbsp; Google Workspace · avanzado.</p></article>
+        <article class="tool-panel rv"><h3>Metodologías y marcos</h3><p>Customer Journey Map · DOFA cruzado · definición de KPI · análisis de modelo de negocio · Lean.</p></article>
+      </div>
+    </section>
+    <section id="casos" aria-labelledby="cases-title">
+      <div class="section-head rv"><p class="eyebrow">Proyectos</p><h2 id="cases-title">Reto, acción y resultado</h2><p>Resultados cuantificados cuando están reportados; alcance y entregables para los trabajos de consultoría.</p></div>
+      <div class="cases">
+        <article class="case rv" id="caso-curso">
+          <div class="case-metric"><small>Proyecto independiente</small><div><strong>12</strong><span>personas capacitadas y acompañadas</span></div></div>
+          <div class="case-content"><h3>Curso práctico de análisis de datos en Excel y Power BI</h3><p class="case-meta">Formación para necesidades del entorno laboral</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>La falta de conocimientos prácticos en Excel y Power BI limitaba el crecimiento profesional y la capacidad de gestionar y analizar información de manera eficiente en diferentes entornos laborales y empresariales.</p></div><div class="rar-item"><h4>Acción</h4><p>Creé un curso práctico de análisis de datos en Excel y Power BI aplicables a tareas habituales del trabajo.</p></div><div class="rar-item"><h4>Resultado</h4><p>Capacité y acompañé a 12 personas en buenas prácticas de análisis de datos y generación de reportes.</p></div></div>
+            <div class="case-tags"><span>Excel</span><span>Power BI</span><span>Capacitación</span><span>Visualización de datos</span><span>Análisis de datos</span></div>
+          </div>
+        </article>
+        <article class="case rv" id="caso-avianca">
+          <div class="case-metric"><small>Avianca · Análisis de negocio</small><div><strong>65 %</strong><span>menos tiempo de actualización</span></div></div>
+          <div class="case-content"><h3>Dashboard de seguimiento comercial</h3><p class="case-meta">Práctica de Análisis de Negocio · Avianca S.A.</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>La información comercial estaba repartida entre varios archivos de Excel, correos y reportes. La actualización era extensa y algunos informes eran monótonos o no reunían toda la información para el análisis.</p></div><div class="rar-item"><h4>Acción</h4><p>Consolidé la consulta en un dashboard principal para el área y la dirección, con visualización en Excel y Power BI.</p></div><div class="rar-item"><h4>Resultado</h4><p>Reduje 65 % el tiempo de actualización de reportes y facilité la consulta dinámica de información para apoyar decisiones.</p></div></div>
+            <div class="case-tags"><span>Excel</span><span>Power BI</span><span>Indicadores</span><span>Visualización de datos</span></div>
+          </div>
+        </article>
+        <article class="case rv" id="caso-comite">
+          <div class="case-metric"><small>Avianca · Comité de seguimiento</small><div><strong>50 %</strong><span>menos tiempo de exposición</span></div></div>
+          <div class="case-content"><h3>Rediseño del comité ejecutivo</h3><p class="case-meta">Práctica de Análisis de Negocio · Avianca S.A.</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>Los comités de seguimiento se desarrollaban mediante presentaciones extensas, estáticas y saturadas de información, lo que dificultaba mantener la atención de los participantes, identificar rápidamente los hallazgos relevantes y enfocar las conversaciones en el análisis y la toma de decisiones.</p></div><div class="rar-item"><h4>Acción</h4><p>Rediseñé el comité del área mediante una presentación ejecutiva dinámica para exponer resultados y facilitar la discusión estratégica.</p></div><div class="rar-item"><h4>Resultado</h4><p>Reduje 50 % el tiempo de exposición del comité y facilité la conversación estratégica sobre resultados.</p></div></div>
+            <div class="case-tags"><span>Comunicación ejecutiva</span><span>Seguimiento de resultados</span><span>Presentación ejecutiva</span></div>
+          </div>
+        </article>
+        <article class="case rv" id="caso-semillero">
+          <div class="case-metric"><small>Semillero · Supply Chain Management</small><div><strong>70 %</strong><span>más eficiencia en logística inversa</span></div></div>
+          <div class="case-content"><h3>Eficiencia del proceso de logística inversa</h3><p class="case-meta">Grupo Amarey – Nova Medical</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>Las deficiencias en la distribución del espacio y la organización operativa limitaban la capacidad de procesamiento y alistamiento del material quirúrgico.</p></div><div class="rar-item"><h4>Acción</h4><p>Analicé los flujos de logística inversa, identifiqué cuellos de botella y documenté los procesos bajo metodología Lean.</p></div><div class="rar-item"><h4>Resultado</h4><p>El análisis y las mejoras del proceso contribuyeron a aumentar 70 % su eficiencia.</p></div></div>
+            <div class="case-tags"><span>Lean</span><span>Análisis de procesos</span><span>Flujo de materiales</span></div>
+          </div>
+        </article>
+        <article class="case rv" id="caso-layout">
+          <div class="case-metric"><small>Semillero · Mejora del layout</small><div><strong>60 %</strong><span>menos reprocesos y tiempos logísticos</span></div></div>
+          <div class="case-content"><h3>Mejora del layout operativo</h3><p class="case-meta">Grupo Amarey – Nova Medical · Supply Chain Management</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>La falta de estandarización y las inconsistencias en el alistamiento generaban actividades repetitivas, demoras y tiempos de respuesta prolongados.</p></div><div class="rar-item"><h4>Acción</h4><p>Participé en una propuesta de renovación del layout operativo y mejoras de organización, a partir del análisis de flujos y cuellos de botella.</p></div><div class="rar-item"><h4>Resultado</h4><p>La propuesta de mejora del layout operativo redujo 60 % los reprocesos y tiempos logísticos.</p></div></div>
+            <div class="case-tags"><span>Lean</span><span>Layout operativo</span><span>Organización de procesos</span></div>
+          </div>
+        </article>
+        <article class="case rv" id="caso-dintexco">
+          <div class="case-metric"><small>Trabajo de grado · Dintexco</small><div><strong>5</strong><span>áreas impactadas por el diagnóstico y las propuestas de mejora</span></div></div>
+          <div class="case-content"><h3>Consultoría integral para fortalecer el modelo de negocio</h3><p class="case-meta">Universidad del Rosario · PYME colombiana del sector de uniformes y dotaciones</p>
+            <div class="rar"><div class="rar-item"><h4>Reto</h4><p>La empresa necesitaba un diagnóstico integrado de su operación y oportunidades para fortalecer la experiencia del cliente, los procesos y su crecimiento.</p></div><div class="rar-item"><h4>Acción</h4><p>Analicé las áreas comercial, mercadeo, administración, finanzas y producción/logística. Construí el Customer Journey Map, revisé el modelo de negocio y formulé estrategias mediante DOFA cruzado y KPI.</p></div><div class="rar-item"><h4>Resultado</h4><p>Entregué un diagnóstico integral y un plan de mejora con recomendaciones para servicio, operación, ingresos y sostenibilidad, junto con indicadores para dar seguimiento.</p></div></div>
+            <div class="case-tags"><span>Excel</span><span>Customer Journey Map</span><span>DOFA cruzado</span><span>KPI</span><span>Modelo de negocio</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="trayectoria" aria-labelledby="trajectory-title">
+      <div class="section-head rv"><p class="eyebrow">Trayectoria</p><h2 id="trajectory-title">Experiencia y formación</h2></div>
+      <div class="timeline rv" id="timeline"><span class="timeline-fill" aria-hidden="true"></span>
+        <article class="timeline-item"><span class="timeline-date">Julio de 2025 – Actualidad</span><h3>Analista de Datos Independiente · Proyecto Independiente</h3><p>Organización, análisis y visualización de información con Excel y Power BI para seguimiento de indicadores comerciales, operativos y de gestión. Capacitación y acompañamiento a 12 personas.</p></article>
+        <article class="timeline-item"><span class="timeline-date">Julio de 2022 – Enero de 2023</span><h3>Practicante de Análisis de Negocio · Avianca S.A.</h3><p>Seguimiento de indicadores en mercados y rutas de nueve países; apoyo a la planificación y automatización de reportes y tableros.</p></article>
+        <article class="timeline-item"><span class="timeline-date">Agosto de 2021 – Junio de 2022</span><h3>Asistente semillero en Supply Chain Management · Grupo Amarey – Nova Medical</h3><p>Análisis de procesos productivos y logísticos, identificación de cuellos de botella y documentación bajo metodología Lean.</p></article>
+      </div>
+      <div class="education-grid">
+        <article class="education-card rv"><h3>Administración en Logística y Producción</h3><p>Universidad del Rosario · Enero de 2020 – Abril de 2023</p></article>
+        <article class="education-card rv"><h3>Administración de Negocios Internacionales</h3><p>Universidad del Rosario · Agosto de 2017 – Abril de 2023</p></article>
+      </div>
+      <div class="extra-grid">
+        <article class="extra-card rv"><h3>Idiomas</h3><p>Español · nativo &nbsp;|&nbsp; Inglés · C1 (IELTS) &nbsp;|&nbsp; Francés · B1</p></article>
+        <article class="extra-card rv"><h3>Formación adicional</h3><p>McKinsey Forward Program · Lean Six Sigma · Analíticas y Métricas de Marketing · “Quiero Ser Digital” – Formación en Inteligencia Artificial.</p></article>
+      </div>
+    </section>
+    <section class="contact rv" id="contacto" aria-labelledby="contact-title">
+      <div><p class="eyebrow">Contacto profesional</p><h2 id="contact-title">Construyamos resultados juntos</h2><p class="contact-copy">Estoy interesado en oportunidades como Analista de Negocio Junior en compañías multinacionales.</p></div>
+      <div class="contact-links" aria-label="Datos de contacto">
+        <a href="mailto:juandlopezfranco07@gmail.com"><span>juandlopezfranco07@gmail.com</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a href="tel:+573176458242"><span>+57 317 645 8242</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/juan-daniel-lopez-franco" target="_blank" rel="noopener noreferrer"><span>LinkedIn · Juan Daniel López Franco</span><span class="contact-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <footer><p>© 2026 Juan Daniel López Franco</p><p>Hecho con apoyo de IA</p></footer>
+  </main>
+  <script>
+    (() => {
+      if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.documentElement.classList.add('js-ready');
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('in');
+          if (entry.target.id === 'timeline') entry.target.classList.add('animated');
+          currentObserver.unobserve(entry.target);
+        });
+      }, { threshold: .08 });
+      document.querySelectorAll('.rv').forEach(item => observer.observe(item));
+    })();
+  </script>
+</body>
+</html>
